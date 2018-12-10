@@ -42,11 +42,11 @@ class Server extends EventEmitter {
       const prefix = this.batch.toString('utf8', 0, 36);
       const block = 1024 * 1024;
       for (let start = 0; start < this.offset; start += block) {
-        const data = (start > 0 ? prefix : '') +
-          this.batch.toString('utf8', start, Math.min(this.offset, start + block));
+        const data =
+          (start > 0 ? prefix : '') + this.batch.toString('utf8', start, Math.min(this.offset, start + block));
         this.wc.send(this.id, {
           ch: this.ch,
-          data,
+          data
         });
       }
       // this.wc.send(this.id, {
@@ -58,7 +58,6 @@ class Server extends EventEmitter {
       this.batchStart = 0;
     }
   }
-
 
   emit(ch, data) {
     // this.wc.send(this.id, {ch, data });

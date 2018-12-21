@@ -70,7 +70,7 @@ module.exports = win => {
 
   const onupdate = (ev, releaseNotes, releaseName, date, updateUrl, onQuitAndInstall) => {
     const releaseUrl = updateUrl || `https://github.com/zeit/hyper/releases/tag/${releaseName}`;
-    rpc.emit('update available', {releaseNotes, releaseName, releaseUrl, canInstall: !!onQuitAndInstall});
+    rpc().emit('update available', {releaseNotes, releaseName, releaseUrl, canInstall: !!onQuitAndInstall});
   };
 
   const eventName = isLinux ? 'update-available' : 'update-downloaded';

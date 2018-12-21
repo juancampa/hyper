@@ -273,7 +273,7 @@ app.on('ready', () => {
 
       // Preloads a window on start up
       app.createPreloadedWindow = createPreloadedWindow;
-      app.createPreloadedWindow();
+      // app.createPreloadedWindow();
 
       // Loads a preloaded window (attach all rpc related functions)
       function loadPreloadedWindow(workingDirectory) {

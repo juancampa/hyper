@@ -16,6 +16,7 @@ const {execCommand} = require('../commands');
 
 module.exports = class Window {
   constructor(options_, cfg, fn) {
+    console.log("CREATING WINDOW");
     const winOpts = Object.assign(
       {
         minWidth: 370,

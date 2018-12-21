@@ -158,12 +158,12 @@ function clearCache() {
     }
   });
 
-  // clear require cache
-  for (const entry in require.cache) {
-    if (entry.indexOf(path) === 0 || entry.indexOf(localPath) === 0) {
-      delete require.cache[entry];
-    }
-  }
+  // // clear require cache
+  // for (const entry in require.cache) {
+  //   if (entry.indexOf(path) === 0 || entry.indexOf(localPath) === 0) {
+  //     delete require.cache[entry];
+  //   }
+  // }
 }
 
 exports.updatePlugins = updatePlugins;

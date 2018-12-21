@@ -14,3 +14,6 @@ yarn-error.log
 .hyper.js
 .hyper_plugins
 
+linked.js
+snapshot_blob.bin
+v8_context_snapshot.bin
